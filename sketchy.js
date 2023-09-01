@@ -6,20 +6,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridArea = document.getElementById('grid-area');
     sliderLabel.textContent = gridDimension;
 
+    generateGrid();
 
-
-    gridControl.addEventListener('input', () => {
+    function generateGrid() {
         gridDimension = gridControl.value;
         sliderLabel.textContent = gridDimension;
-        
+
+        for (let i = 0; i < gridDimension * gridDimension ; i++) {
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('grid-element');
+            let newDivHeight = gridArea.offsetWidth / gridDimension;
+            let newDivWidth = newDivHeight;
+            newDiv.style.height = `${newDivHeight}px`;
+            newDiv.style.width = `${newDivWidth}px`;
+            gridArea.style.borderRadius = `${newDivHeight}px`;
+            gridArea.appendChild(newDiv);
+
+        }
+    }
+
+    function resetGrid() {
         while (gridArea.firstChild) {
             gridArea.removeChild(gridArea.firstChild);
         }
-        
-        for (let i = 0; i < gridDimension; i++) {
-            const newDiv = document.createElement('div');
-            newDiv.classList.add('grid-element');
-            gridArea.appendChild(newDiv);
-        }
+    }
+    gridControl.addEventListener('input', () => {
+        resetGrid();
+        generateGrid();
     });
+    
 });
