@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid-element {
+    padding: 1em;
+}
+
+#grid-area {
+    background: white;
+    width: 600px;
+}
+
+label {
+    color: white;
+}
+main {
+    width: 900px;
+}
+body {
+    background: black;
+}
