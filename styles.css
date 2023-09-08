@@ -27,7 +27,7 @@ label {
     text-align: center;
 }
 main {
-    width: 950px;
+    width: 900px;
     display: flex;
     flex-direction: row;
     background: #F40220;
@@ -38,7 +38,7 @@ main {
 
 body {
     background-size: 50px 50px;
-    background-color: #f4d602;
+    background-color: #FFB703;
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
     background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
     background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
@@ -67,6 +67,7 @@ body {
     height: 120px;
     width: 120px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 footer {
